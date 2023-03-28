@@ -1,0 +1,405 @@
+@font-face{
+    font-family: 'zhcn';
+    src: url('../font/zhcn.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../font/montserrat.regular.ttf');
+}
+
+@keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+body{
+    margin : 0;
+    font-family: 'zhcn';
+    overflow-x: hidden;
+}
+
+.bottom-shadow{
+    -moz-box-shadow: inset 0 -100px 100px -100px #000000;
+    -webkit-box-shadow: inset 0 -190px 100px -100px #000000;
+    box-shadow: inset 0 -109px 150px 50px #000000;
+}
+
+/* top shadow only */
+.top-shadow{
+    -moz-box-shadow: inset 0 100px 100px -100px #000000;
+    -webkit-box-shadow: inset 0 190px 100px -100px #000000;
+    box-shadow: inset 0 109px 50px 10px #000000;
+}
+
+.bottom-top-shadow2{
+    -moz-box-shadow: inset 0 -100px 100px -100px #000000, inset 0 100px 100px -100px #000000;
+    -webkit-box-shadow: inset 0 -190px 100px -100px #000000, inset 0 190px 100px -100px #000000;
+    box-shadow: inset 0 -109px 150px 50px #000000, inset 0 109px 50px 10px #000000;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#jumbotron-1{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/kazuha-jumbotron.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+#distantVoyage{
+    width: 40rem;
+    margin-bottom: 2%;
+}
+
+.downloadNow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.downloadNow img{
+    margin: 0 1% 0 1%;
+    height: 3rem;
+    opacity: 0.5;
+}
+
+.downloadNow img:hover{
+    opacity: 1;
+}
+
+.hid{
+    display: none;
+    opacity: 80%;
+}
+
+@media (max-width: 1050px) {
+    #jumbotron-1{
+        background-position: 100% 50%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #jumbotron-1{
+       background-position: 100% 50%;
+       justify-content: center;    
+    }   
+   
+    #distantVoyage{
+       width: 80%;
+    }
+   
+    .downloadNow{
+       display: none;
+    }
+   
+    #jumbotron-1 .hid{
+       display: block;
+       width: 50%;
+    }
+}
+
+
+#new-char{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/latar-newchar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kazuha-desc{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.kazuha-desc > img{
+    margin: 0 2% 0 10%;
+    width: calc(20rem + 6vw);
+    object-fit: cover;
+}
+
+#kazuha-move{
+    background-image: url(../img/kazuha-gerak.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: bottom;
+    width: 60%;
+    height: 100%;
+    opacity: 0;
+}
+
+.kazuha-move{
+    animation: slideInRight 1s ease-in-out;
+}
+
+@media (max-width: 366px) {
+
+    #new-char{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .kazuha-desc{
+        margin-top: 20%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #new-char{
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+        background-image: url(../img/latar-newchar-polos.png);
+    }
+    #kazuha-move{
+        display: none;
+    }
+
+    .kazuha-desc{
+        width: 100%;
+        align-items: center;
+        margin: 0 10% 0 0;
+    }
+
+    .kazuha-desc > img{
+        width: 80%;
+        object-fit: scale-down;
+    }
+
+    .bottom-top-shadow2{
+        -moz-box-shadow: inset 0 -100px 100px -100px #000000, inset 0 100px 100px -100px #000000;
+        -webkit-box-shadow: inset 0 -190px 100px -100px #000000, inset 0 190px 100px -100px #000000;
+        box-shadow: inset 0 -109px 90px 50px #000000, inset 0 109px 50px 10px #000000;
+    }
+    
+    .weapon-geser{
+        margin-bottom: 2%;
+    }
+
+    .weapon-geser img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .kazuha-desc{
+        display: block;
+        width: 100%;
+    }
+
+    #new-char{
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+        background-image: url(../img/latar-newchar-polos.png);
+    }
+    #kazuha-move{
+        display: none;
+    }
+
+    .kazuha-desc{
+        width: 100%;
+        align-items: center;
+        margin: 0 10% 0 0;
+    }
+
+    .kazuha-desc > img{
+        width: calc(100%-6vw);
+    }
+
+    .bottom-top-shadow2{
+        -moz-box-shadow: inset 0 -100px 100px -100px #000000, inset 0 100px 100px -100px #000000;
+        -webkit-box-shadow: inset 0 -190px 100px -100px #000000, inset 0 190px 100px -100px #000000;
+        box-shadow: inset 0 -109px 90px 50px #000000, inset 0 109px 50px 10px #000000;
+    }
+}
+
+#new-weapons{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/back-weapons.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.new-weapons-text{ 
+    width: 50%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-weapons-text > img{
+    margin: 0 2% 0 10%;
+    width: calc(14rem + 10vw);
+    object-fit: cover;
+}
+
+.weapon-geser{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.weapon-geser > #image{
+    width: 30%;
+}
+
+.weapon-geser > #panah-kiri{
+    width: 5%;
+}
+
+.weapon-geser > #panah-kanan{
+    width: 5%;
+}
+
+@media (max-width: 380px){
+    #new-weapons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .weapon-geser > #image {
+        width: 100%!important;
+        /* height: 70%; */
+    }
+
+    .new-weapons-text{
+        margin-top: 20%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #new-char{
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    .new-weapons-text{
+        width: 100%;
+        align-items: center;
+        margin: 0 10% 0 0;
+    }
+
+    .new-weapons-text > img{
+        width: 80%;
+        object-fit: scale-down;
+    }
+
+    .weapon-geser{
+        /* width: 100%; */
+        height: 100%;
+        justify-content: start;
+    }
+}
+
+@media (max-width: 768px){
+    .new-weapons-text{
+        display: block;
+        width: 100%;
+    }
+
+    #new-weapons{
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    .new-weapons-text{
+        width: 100%;
+        align-items: center;
+        margin: 0 10% 0 0;
+    }
+
+    .weapon-geser{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .weapon-geser > #image {
+        width: 100%!important;
+        /* height: 90%; */
+    }
+
+    .weapon-geser > #panah-kiri{
+        transform: rotate(90deg);
+    }
+    
+    .weapon-geser > #panah-kanan{
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 1200px){
+    .weapon-geser{
+        display: flex;
+        position: relative;
+        top: 10%;
+    }
+}
+
+@media (max-width: 1180px){
+    .weapon-geser{
+        top: 5%;
+    }
+    .weapon-geser > #image {
+        width: 32%;
+    }
+}
+
+@media (max-width: 836px){
+ 
+}

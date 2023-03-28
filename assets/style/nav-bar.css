@@ -1,0 +1,158 @@
+@font-face{
+    font-family: 'zhcn';
+    src: url('../font/zhcn.ttf');
+}
+
+body{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'zhcn';
+    overflow-x: hidden;
+}
+
+.nav-bar-container{
+    top: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 11vh;
+    z-index: 1;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.isi > ul{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    text-decoration: none;
+    align-items: center;
+    width: 60vw;
+    height: 100%;
+}
+
+.isi a{
+    text-decoration: none;
+    color: white;
+}
+
+.isi a:hover{
+    color: #93FFE9;
+}
+
+.isi > ul > li > img{
+    width: 8rem;
+    height: 3rem;
+}
+
+.login a{
+    text-decoration: none;
+    color: white;
+}
+
+.login a:hover{
+    color: #93FFE9;   
+}
+
+.login{
+    position: relative;
+    left: 10%;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.login a::after{
+    position: absolute;
+    content: url(../img/vector-user.png);
+    width: 100%;
+    height: 100%;
+    top: -28%;
+    transform: scale(.7);
+}
+
+.toggle_btn{
+    display: flex;
+    position: relative;
+    justify-content: start;
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.dropdown-menu{
+    display: none;
+    height: 0;
+    position: fixed;
+    top: 12%;
+    bottom: 0;
+    z-index: 1;
+    color: white;
+    justify-content: start;
+    left: 2rem;
+    align-items: center;
+    flex-direction: column;
+    /* top: 80%; */
+    width: 35vw;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open{
+    height: 50vh;
+}
+
+.dropdown-menu > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.dropdown-menu > li > a{
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu > li > a:hover{
+    color:blueviolet;
+}
+
+@media (max-width: 950px) {
+    .isi{
+        display: none;
+    }
+
+    .login{
+        display: none;
+    }
+
+    .nav-bar-container{
+        justify-content: start;
+    }
+    
+    .toggle_btn{
+        margin: 20px;
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+}
