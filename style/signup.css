@@ -1,0 +1,241 @@
+body{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'zhcn';
+    overflow-x: hidden;
+}
+
+.register{
+    display: flex;
+    background-image: url(../img/register-image/regis-background2.png);
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    align-items: center; 
+}
+
+.mihoyo-regis{
+    position: absolute;
+    display: flex;
+    top: 2.5%;
+    margin-left: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mihoyo-regis > img{
+    width: 80%;
+}
+
+.form-regis{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    top: 6.5%;
+    width: 82%;
+    height: 79%;
+    border-radius: 2%;
+    background-color: aliceblue;
+    background-image: url(../img/register-image/background-putih-lebar.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+}
+
+.rules{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top:15%;
+    right:2%;
+    flex-wrap: wrap;
+}
+
+.rules > #about{
+    width: 40%;
+}
+
+.rules > #rules{
+    margin-top: 14%;
+    width: 70%;
+}
+
+.form-submit{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 15%;
+    left: 13%;
+    width: 30%;
+    height: 100%;
+}
+
+.form-submit > #email-register{
+    width: 80%;
+}
+
+.form-submit > #form{
+    margin-top: 7%;
+    height: 100%;
+    width: 100%;
+}
+
+.form-wrong::placeholder {
+    color: red;
+}
+
+.form-submit > #form > input{
+    width: 90%;
+    height: 4%;
+    margin: 1%;
+    padding: 1.5%;
+    padding-left: 5%;
+}
+
+.form-submit > #form > label{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.form-submit > #form > label::after{
+    content: "*";
+    color: red;
+
+    position: absolute;
+}
+
+.agreement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.check{
+    /* width: 10%; */
+    margin-top: 1%;
+    padding-right: 2%;
+}
+
+.check > input[type=checkbox]{
+    top: 5%;
+    width: 12px;
+    height: 12px;
+}
+
+.label{
+    width: 100%;
+}
+
+.label > #agreement-label{
+    font-size: 55%;
+    margin-bottom: 1%;
+}
+
+.form-submit > #form > #submit{
+    width: 98%;
+    padding:2.5%;
+    margin-left: 2%;
+    margin-top: 4%;
+    background-color: #393B40;
+    border-style: none;
+    color: white;
+    border-radius: 15%;
+}
+
+.form-submit > #form > #submit:hover{
+    color:#F4C780;
+}
+
+.paimon-regis{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+}
+
+.paimon-regis > img{
+    width: 100%;
+}
+
+.label > #agreement-label::after{
+    content: "*";
+    color: red;
+
+    position: absolute;
+}
+
+@media (max-width: 1200px) {
+    .form-regis{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top:5%;
+        width: 82%;
+        height: 79%;
+        border-radius: 2%;
+        background-color: aliceblue;
+        background-image: url(../img/register-image/background-putih-polos.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 878px) {
+    .form-regis{
+        display: flex;
+        top: 5%;
+        background-image: url(../img/register-image/background-putih-tinggi.png);
+    }
+    
+    .form-submit{
+        position: static;
+        display: flex;
+        height: auto;
+        width: 60%;
+    }
+    
+    .rules{
+        position: static;
+        display: none;
+    }
+
+    .form-submit > #form{
+        /* display: flex; */
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .paimon-regis > img{
+        width: 7rem;
+    }
+
+    .form-submit > #form > input{
+        width: 80%;
+        margin: 0;
+        padding: 1.5%;
+        padding-left: 5%;
+    }
+    
+    .form-submit > #form > label{
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+}
